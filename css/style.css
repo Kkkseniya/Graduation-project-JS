@@ -1220,6 +1220,7 @@ video#video_background {
 
 .up {
 	position: fixed;
+	display: none;	
 	bottom: 50px;
 	right: 50px;
 	width: 70px;
