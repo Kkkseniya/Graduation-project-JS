@@ -5,13 +5,16 @@ const modal = () => {
   const modalOverlay = document.querySelector(".modal-overlay");
   const buttons = document.querySelectorAll(".callback-btn");
   const modalClose = document.querySelector(".modal-close");
+  const buttonServices = document.querySelector(".button-services");
+  const carouselLinks = document.querySelectorAll('a[href="#application"]');
+  const allButtons = [...buttons, ...carouselLinks, buttonServices];
 
   const closeModal = () => {
     modal.style.display = "none";
     modalOverlay.style.display = "none";
   };
 
-  buttons.forEach((btn) => {
+  allButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       if (window.innerWidth >= 768) {
