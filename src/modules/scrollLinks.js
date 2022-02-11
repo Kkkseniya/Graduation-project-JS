@@ -1,7 +1,11 @@
 const scrollLinks = () => {
   const smoothLinks = document.querySelectorAll(".top-menu > ul > li > a");
+  const smoothLinksMenu = document.querySelectorAll(
+    ".mobile-menu > ul > li > a"
+  );
+  const allLinks = [...smoothLinks, ...smoothLinksMenu];
 
-  smoothLinks.forEach((link) => {
+  allLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const id = link.getAttribute("href");
